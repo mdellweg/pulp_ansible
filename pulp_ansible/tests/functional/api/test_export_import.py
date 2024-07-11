@@ -13,7 +13,7 @@ from pulp_ansible.tests.functional.constants import ANSIBLE_FIXTURE_URL
 
 
 @pytest.mark.parametrize("cleanup", [True, False])
-@pytest.mark.parallel
+# @pytest.mark.parallel
 def test_export_then_import(
     pulpcore_bindings,
     ansible_bindings,
