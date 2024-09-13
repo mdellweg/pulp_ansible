@@ -275,7 +275,7 @@ def import_collection(
     temp_file = PulpTemporaryFile.objects.get(pk=temp_file_pk)
     filename = CollectionFilename(expected_namespace, expected_name, expected_version)
     log.info(f"Processing collection from {temp_file.file.name}")
-    user_facing_logger = logging.getLogger("pulp_ansible.app.tasks.collection.import_collection")
+    user_facing_logger = logging.getLogger("pulp_ansible.app.tasks.collections.import_collection")
 
     try:
         with temp_file.file.open() as artifact_file:
